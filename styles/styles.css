@@ -191,7 +191,7 @@ h1 {
 }
 
 .nav ul li:nth-child(5) {
-  @media (max-width: 991.98px) {
+  @media (max-width: 991px) {
     display: none;
   }
 }
@@ -216,14 +216,11 @@ h1 {
 }
 .rotate-effect {
   transform: rotate(180deg);
-  transition: all 0.3s;
+  transition: all var(--transition-duration);
 }
 
 .nav .list-dropdown-hook {
   position: relative;
-  @media (max-width: 991px) {
-    /* height: 280px; */
-  }
 }
 
 .nav .list-dropdown {
@@ -234,9 +231,7 @@ h1 {
   right: -5px;
   background-color: rgba(18, 17, 50, 0.7);
   padding: 10px;
-  animation: reveal 0.3s ease-in-out;
-  @media (min-width: 992px) {
-  }
+  animation: reveal var(--transition-duration) ease-in-out;
 
   @media (max-width: 991px) {
     width: 100%;
@@ -319,8 +314,6 @@ h1 {
     padding-bottom: 40px;
   }
 
-  @media (min-width: 992px) {
-  }
   @media (max-width: 768px) {
     height: 100%;
     padding: 40px 15px 30px;
@@ -425,8 +418,6 @@ h1 {
 
 /* Horizontal scrolling */
 
-.scroller-container {
-}
 .scroller {
   border-bottom: 1px solid var(--color-grey);
   padding: 35px 0;
@@ -676,7 +667,7 @@ h1 {
   height: 184px;
 
   @media (min-width: 768px) and (max-width: 991px) {
-    height: 280px;
+    height: 260px;
   }
 
   @media (min-width: 557px) and (max-width: 767px) {
@@ -767,7 +758,7 @@ h1 {
 
   @media (min-width: 768px) and (max-width: 1080px) {
     height: 100%;
-    padding-top: 50px;
+    padding: 50px;
   }
 
   @media (max-width: 767px) {
