@@ -32,19 +32,6 @@ body {
 }
 
 /* common styles*/
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  /* Styles for screens between 992px and 1199.98px wide */
-}
-
-@media (min-width: 768px) and (max-width: 1080px) {
-  /* Styles for screens between 768px and 991.98px wide */
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-  /* Styles for screens between 576px and 767.98px wide */
-}
-
 .hidden {
   display: none;
 }
@@ -243,8 +230,10 @@ h1 {
 }
 
 .nav .list-dropdown li:last-child {
-  border-bottom: 1px solid var(--color-grey);
-  position: static;
+  @media (max-width: 991px) {
+    border-bottom: 1px solid var(--color-grey);
+    position: static;
+  }
 }
 
 @keyframes reveal {
@@ -1182,9 +1171,10 @@ h1 {
 }
 
 .footer {
-  overflow-x: hidden;
   background-color: var(--color-base);
   padding: 52px var(--fixed-padding) 32px;
+  overflow-x: hidden;
+  position: relative;
 
   @media (max-width: 768px) {
     padding: 25px 15px 15px;
@@ -1267,6 +1257,8 @@ h1 {
   justify-content: start;
   gap: 200px;
   padding: 130px 0;
+  position: relative;
+  z-index: 2;
   @media (min-width: 769px) and (max-width: 1080px) {
     gap: 50px;
     align-items: start;
@@ -1420,4 +1412,16 @@ h1 {
 }
 .secondary-footer span {
   opacity: 0.7;
+}
+
+.footer-watermark-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 680px;
+  height: 100%;
+  z-index: 1;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
